@@ -1,0 +1,51 @@
+//Написать класс «автомобиль», который должен уметь заводится, глушить мотор, ехать и держать необходимую скорость.
+
+public class main {
+    public static void main(String[] args) {
+        Car myCar = new Car();
+        myCar.setName("Автомобіль");
+
+        myCar.switchOn();
+        myCar.go();
+        myCar.keepSpeed(50);
+        myCar.stopped();
+        myCar.switchOff();
+
+        System.out.println("");
+
+    }
+}
+
+public class Car {
+    private String name;
+    private int speed;
+
+    public void setName(String s) {
+        name = s;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void switchOn() {
+        System.out.println(name + " завівся.");
+    }
+
+    public void switchOff() {
+        System.out.println(name + " заглушив мотор.");
+    }
+
+    public void go() {
+        System.out.println(name + " поехав.");
+    }
+
+    public void stopped() {
+        System.out.println(name + " зупинився");
+    }
+
+    public void keepSpeed(int x) {
+        speed += x;
+        System.out.println(name + " їде зі швидкістю " + speed + " км в час.");
+    }
+}
